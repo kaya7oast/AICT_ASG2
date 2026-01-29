@@ -1,0 +1,13 @@
+scenario,type,mode,valid,violations,consistent
+Valid Route via Operational Stations,Route Validity,TODAY,True,[],
+Invalid Route - Station Under Maintenance,Route Validity,TODAY,False,[],
+Consistent Advisory - Maintenance with Service Adjustment,Advisory Consistency,TODAY,,,True
+Inconsistent Advisory - Missing Service Adjustment,Advisory Consistency,TODAY,,,False
+"Valid Route - Expo Down, Using TM Bypass",Route Validity,TODAY,True,[],
+Invalid Route - Peak Hour with Reduced Service,Route Validity,TODAY,False,['RULE-11: Peak hours prohibit reduced service on EWL main line'],
+Valid - T5 Operational with Extensions Complete,Route Validity,FUTURE,True,[],
+Invalid - T5 Operational Without TEL Extension,Route Validity,FUTURE,False,['RULE-7a: T5 operational requires TEL extension completion'],
+Consistent - Systems Integration Active,Advisory Consistency,FUTURE,,,True
+Inconsistent - Integration Without Maintenance,Advisory Consistency,FUTURE,,,False
+Invalid - Both Lines Operating During Conversion,Route Validity,FUTURE,False,['RULE-8: EWL and TEL cannot both operate on airport stretch during conversion'],
+Invalid - T5 Interchange Missing CRL,Route Validity,FUTURE,False,['RULE-9b: T5 interchange requires CRL service'],

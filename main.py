@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from src.graph import build_network
 from src.algorithms import Pathfinder
+from src.logic_inference import run_inference_scenarios
 
 OUTPUT_DIR = "Output"
 
@@ -92,8 +93,48 @@ def plot_results(results_df):
     plt.savefig(save_path)
     plt.show()
 
+def run_logic_inference_experiments(): #Tian Rui
+    """Run logical inference experiments for both network modes."""
+    print("\n" + "="*80)
+    print("LOGICAL INFERENCE EXPERIMENTS")
+    print("="*80)
+    
+    # Run inference scenarios
+    today_results = run_inference_scenarios("TODAY")
+    future_results = run_inference_scenarios("FUTURE")
+    
+    # Create DataFrame for results
+    all_inference_results = today_results + future_results
+    df_inference = pd.DataFrame(all_inference_results)
+    
+    if not df_inference.empty:
+        csv_path = os.path.join(OUTPUT_DIR, "logic_inference_results.csv")
+        df_inference.to_csv(csv_path, index=False)
+        print(f"\n[SUCCESS] Saved inference results to: {csv_path}")
+        
+        # Print summary table (cleaner formatting)
+        print("\n" + "="*80)
+        print("INFERENCE RESULTS SUMMARY")
+        print("="*80)
+        for idx, row in df_inference.iterrows():
+            status = "VALID" if row.get('valid') == True else "INVALID" if row.get('valid') == False else ("CONSISTENT" if row.get('consistent') == True else "INCONSISTENT")
+            violations = row.get('violations', [])
+            # Handle violations properly - check if it's a list and has items
+            violation_text = ""
+            if isinstance(violations, list) and len(violations) > 0:
+                violation_text = f" - {violations[0]}"
+            print(f"{idx+1:2d}. [{row['mode']:6s}] {status:12s} - {row['scenario']}{violation_text}")
+        print("="*80)
+    
+    return df_inference
+
 def main():
     setup_directories()
+    
+    # Part 1: Pathfinding experiments (existing) - Tian Rui
+    print("\n" + "="*80)
+    print("PART 1: PATHFINDING ALGORITHMS")
+    print("="*80)
     
     df_today = run_experiment("TODAY")
     print("-" * 30)
@@ -106,5 +147,18 @@ def main():
         all_results.to_csv(combined_csv, index=False)
         
         plot_results(all_results)
+    
+    # Part 2: Logical inference experiments (new) - Tian Rui
+    print("\n" + "="*80)
+    print("PART 2: LOGICAL INFERENCE & ADVISORY CONSISTENCY")
+    print("="*80)
+    
+    df_inference = run_logic_inference_experiments()
+    
+    print("\n" + "="*80)
+    print("ALL EXPERIMENTS COMPLETED")
+    print("="*80)
+    print(f"Results saved in: {OUTPUT_DIR}/")
 
-main()
+if __name__ == "__main__":
+    main()
