@@ -1,0 +1,25 @@
+Mode,Algorithm,Origin,Dest,Cost (Mins),Nodes Expanded,Time (ms),Path
+FUTURE,BFS,Changi Airport,City Hall,28,10,0.010900082997977734,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall
+FUTURE,DFS,Changi Airport,City Hall,50,9,0.007300055585801601,Changi Airport -> Changi Terminal 5 -> Pasir Ris -> Tanah Merah -> Paya Lebar -> Marina Bay -> City Hall
+FUTURE,GBFS,Changi Airport,City Hall,28,5,0.013999990187585354,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall
+FUTURE,A*,Changi Airport,City Hall,28,5,0.010999967344105244,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall
+FUTURE,BFS,Changi Airport,Orchard,42,13,0.0076999422162771225,Changi Airport -> Changi Terminal 5 -> Sungei Bedok -> Gardens by the Bay -> Orchard
+FUTURE,DFS,Changi Airport,Orchard,57,10,0.006400048732757568,Changi Airport -> Changi Terminal 5 -> Pasir Ris -> Tanah Merah -> Paya Lebar -> Marina Bay -> City Hall -> Orchard
+FUTURE,GBFS,Changi Airport,Orchard,35,6,0.010399962775409222,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall -> Orchard
+FUTURE,A*,Changi Airport,Orchard,35,6,0.011199968867003918,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall -> Orchard
+FUTURE,BFS,Changi Airport,Gardens by the Bay,25,9,0.005400041118264198,Changi Airport -> Changi Terminal 5 -> Sungei Bedok -> Gardens by the Bay
+FUTURE,DFS,Changi Airport,Gardens by the Bay,74,11,0.006499933078885078,Changi Airport -> Changi Terminal 5 -> Pasir Ris -> Tanah Merah -> Paya Lebar -> Marina Bay -> City Hall -> Orchard -> Gardens by the Bay
+FUTURE,GBFS,Changi Airport,Gardens by the Bay,52,8,0.011399970389902592,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall -> Orchard -> Gardens by the Bay
+FUTURE,A*,Changi Airport,Gardens by the Bay,25,11,0.043199979700148106,Changi Airport -> Changi Terminal 5 -> Sungei Bedok -> Gardens by the Bay
+FUTURE,BFS,Paya Lebar,Changi Terminal 5,28,14,0.010200077667832375,Paya Lebar -> Tanah Merah -> Pasir Ris -> Changi Terminal 5
+FUTURE,DFS,Paya Lebar,Changi Terminal 5,63,7,0.006100046448409557,Paya Lebar -> Marina Bay -> City Hall -> Orchard -> Gardens by the Bay -> Sungei Bedok -> Changi Terminal 5
+FUTURE,GBFS,Paya Lebar,Changi Terminal 5,22,5,0.009599956683814526,Paya Lebar -> Tanah Merah -> Expo -> Changi Airport -> Changi Terminal 5
+FUTURE,A*,Paya Lebar,Changi Terminal 5,22,5,0.012399978004395962,Paya Lebar -> Tanah Merah -> Expo -> Changi Airport -> Changi Terminal 5
+FUTURE,BFS,HarbourFront,Changi Terminal 5,68,15,0.007700058631598949,HarbourFront -> Buona Vista -> City Hall -> Paya Lebar -> Tanah Merah -> Pasir Ris -> Changi Terminal 5
+FUTURE,DFS,HarbourFront,Changi Terminal 5,100,10,0.0067999353632330894,HarbourFront -> Buona Vista -> Bishan -> Paya Lebar -> Marina Bay -> City Hall -> Orchard -> Gardens by the Bay -> Sungei Bedok -> Changi Terminal 5
+FUTURE,GBFS,HarbourFront,Changi Terminal 5,62,8,0.01179997343569994,HarbourFront -> Buona Vista -> City Hall -> Paya Lebar -> Tanah Merah -> Expo -> Changi Airport -> Changi Terminal 5
+FUTURE,A*,HarbourFront,Changi Terminal 5,59,8,0.012599979527294636,HarbourFront -> Buona Vista -> Bishan -> Paya Lebar -> Tanah Merah -> Expo -> Changi Airport -> Changi Terminal 5
+FUTURE,BFS,Bishan,Changi Terminal 5,48,15,0.007300055585801601,Bishan -> Orchard -> Gardens by the Bay -> Sungei Bedok -> Changi Terminal 5
+FUTURE,DFS,Bishan,Changi Terminal 5,73,8,0.005699926987290382,Bishan -> Paya Lebar -> Marina Bay -> City Hall -> Orchard -> Gardens by the Bay -> Sungei Bedok -> Changi Terminal 5
+FUTURE,GBFS,Bishan,Changi Terminal 5,32,6,0.009900075383484364,Bishan -> Paya Lebar -> Tanah Merah -> Expo -> Changi Airport -> Changi Terminal 5
+FUTURE,A*,Bishan,Changi Terminal 5,32,6,0.010299962013959885,Bishan -> Paya Lebar -> Tanah Merah -> Expo -> Changi Airport -> Changi Terminal 5

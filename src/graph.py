@@ -39,14 +39,12 @@ class Graph:
         # 1.5 multiplier maps distance units to approx minutes
         return math.sqrt((n1.x - n2.x)**2 + (n1.y - n2.y)**2) * 1.5
 
-    # --- REQUIRED FOR OPTIMIZATION TASK ---
     def set_edge_weight(self, u, v, new_weight):
         """Allows simulating disruptions (breaking tracks) or delays."""
         if u in self.nodes and v in self.nodes:
             node_u = self.nodes[u]
             node_v = self.nodes[v]
             
-            # Update both directions if they exist
             if node_v in node_u.neighbors:
                 node_u.neighbors[node_v] = new_weight
             if node_u in node_v.neighbors:
@@ -55,7 +53,7 @@ class Graph:
 def build_network(mode="TODAY"):
     g = Graph()
     
-    # 1. REALISTIC COORDINATES (Scaled: 1 unit ~= 1km)
+    # (Scaled: 1 unit ~= 1km)
     stations = {
         "Jurong East": (5, 14), "Buona Vista": (12, 9), "HarbourFront": (14, 2),
         "Orchard": (19, 8), "City Hall": (21, 6), "Marina Bay": (22, 4),
@@ -71,7 +69,6 @@ def build_network(mode="TODAY"):
     for name, (x, y) in stations.items():
         g.add_station(name, x, y)
 
-    # 2. CONNECTIONS (Your Realistic Timings)
     # EWL
     g.add_connection("Jurong East", "Buona Vista", 9)
     g.add_connection("Buona Vista", "City Hall", 16)

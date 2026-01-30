@@ -1,0 +1,13 @@
+Mode,Algorithm,Origin,Dest,Cost (Mins),Nodes Expanded,Time (ms),Path
+TODAY,BFS,Changi Airport,City Hall,28,7,0.024300068616867065,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall
+TODAY,DFS,Changi Airport,City Hall,36,8,0.018900027498602867,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> Marina Bay -> City Hall
+TODAY,GBFS,Changi Airport,City Hall,28,5,0.0342000275850296,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall
+TODAY,A*,Changi Airport,City Hall,28,5,0.024400069378316402,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall
+TODAY,BFS,Changi Airport,Orchard,35,11,0.0127000967040658,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall -> Orchard
+TODAY,DFS,Changi Airport,Orchard,43,9,0.009900075383484364,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> Marina Bay -> City Hall -> Orchard
+TODAY,GBFS,Changi Airport,Orchard,35,6,0.016300007700920105,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall -> Orchard
+TODAY,A*,Changi Airport,Orchard,35,6,0.016000005416572094,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall -> Orchard
+TODAY,BFS,Changi Airport,Gardens by the Bay,52,14,0.011299969628453255,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall -> Orchard -> Gardens by the Bay
+TODAY,DFS,Changi Airport,Gardens by the Bay,60,10,0.0097999582067132,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> Marina Bay -> City Hall -> Orchard -> Gardens by the Bay
+TODAY,GBFS,Changi Airport,Gardens by the Bay,52,8,0.017300015315413475,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall -> Orchard -> Gardens by the Bay
+TODAY,A*,Changi Airport,Gardens by the Bay,52,11,0.020900042727589607,Changi Airport -> Expo -> Tanah Merah -> Paya Lebar -> City Hall -> Orchard -> Gardens by the Bay
