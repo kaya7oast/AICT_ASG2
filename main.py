@@ -161,10 +161,7 @@ def run_advanced_optimization():
     else:
         print("   No improvement found.")
 
-# ==========================================
-# MAIN ENTRY POINT
-# ==========================================
 if __name__ == "__main__":
-    run_standard_experiments()   # Task 1: Graphs/Comparison
-    run_advanced_optimization()  # Task 2 & 3: Optimization
-    print("\nAll tasks complete. Check 'output' folder.")
+    run_standard_experiments()   
+    run_advanced_optimization()  
+    print("All tasks complete.")
