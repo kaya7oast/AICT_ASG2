@@ -184,6 +184,49 @@ Uses **resolution-based inference**:
 6. **Natural Language Explanations**: User-friendly violation reports
 7. **Route Optimization**: Multi-criteria optimization (time, cost, crowding)
 
+
+
+## AI Approach Used For Crowding Prediction
+- **Bayesian Network**
+- Probabilistic inference using **Variable Elimination**
+- Designed for **scenario-based “what-if” analysis**
+- Focuses on explainability and decision support rather than exact prediction
+
+---
+
+## Model Variables
+
+| Variable | Description | States |
+|--------|------------|--------|
+| Weather (W) | Weather conditions | Clear, Rainy, Thunderstorms |
+| Time of Day (T) | Time period | Morning, Afternoon, Evening |
+| Day Type (D) | Type of day | Weekday, Weekend |
+| Network Mode (M) | MRT network configuration | Today, Future (TELe+CRL) |
+| Service Status (S) | MRT service condition | Normal, Reduced, Disrupted |
+| Demand Proxy (P) | Estimated passenger demand | Low, Medium, High |
+| Crowding Risk (C) | Likelihood of congestion | Low, Medium, High |
+
+---
+
+## Bayesian Network Structure
+
+- Weather, Time of Day, and Day Type influence **Demand Proxy**
+- Demand Proxy, Service Status, and Network Mode influence **Crowding Risk**
+- Network Mode captures the impact of **future MRT expansions** on crowding
+
+This structure allows comparison between **Today vs Future** scenarios under identical conditions.
+
+
+
+## How to Run
+
+### 1. Install Dependencies
+Ensure Python 3.9+ is installed, then run:
+```bash
+pip install pgmpy
+
+---
+
 ## References
 
 1. Russell & Norvig (2020). *Artificial Intelligence: A Modern Approach* (4th ed.)
